@@ -22,7 +22,6 @@
                                 {{ csrf_field() }}
 
                                 <div class="mdl-grid ">
-
                                     <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('name') ? 'is-invalid' :'' }}">
                                             {!! Form::text('name', null, array('id' => 'name', 'class' => 'mdl-textfield__input', 'pattern' => '[A-Z,a-z,0-9]*')) !!}
@@ -68,7 +67,8 @@
 
                                     @if(config('settings.reCaptchStatus'))
                                         <div class="mdl-cell mdl-cell--12-col">
-                                            <div class="g-recaptcha" data-sitekey="{{ env('RE_CAP_SITE') }}"></div>
+                                            <!-- <div class="g-recaptcha" data-sitekey="{{ env('RE_CAP_SITE') }}"></div> -->
+                                            <div class="g-recaptcha" data-sitekey="6Lf7ik0UAAAAACIYxt-PvoI-GitShHBZzoFggFm_"></div>
                                         </div>
                                     @endif
 
