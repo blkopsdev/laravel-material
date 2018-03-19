@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
+// use Auth;
 
 class UserController extends Controller
 {
@@ -11,10 +11,10 @@ class UserController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -23,12 +23,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
+        // $user = Auth::user();
 
-        if ($user->isAdmin()) {
-            return view('pages.admin.home');
-        }
+        // if ($user->isAdmin()) {
+        //     return view('pages.admin.home');
+        // }
 
-        return view('pages.user.home');
+        return view('pages.welcome');
     }
 }

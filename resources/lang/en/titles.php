@@ -2,8 +2,8 @@
 
 return [
 
-    'app'			        => 'Laravel MDL 2.0',
-    'app2'			       => 'Laravel MDL 2.0',
+    'app'			        => 'CoinPaper',
+    'app2'			       => 'CoinPaper',
     'home'			       => 'Home',
     'login'			      => 'Login',
     'logout'		      => 'Logout',

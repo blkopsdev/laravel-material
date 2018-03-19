@@ -11,7 +11,7 @@
 |
 | Middleware options can be located in `app/Http/Kernel.php`
 |
- */
+*/
 
 // Homepage Route
 //Route::get('/', 'WelcomeController@welcome')->name('welcome');
@@ -22,6 +22,9 @@ Auth::routes();
 // Public Resource Route
 Route::get('material.min.css.template', 'ThemesManagementController@template');
 
+// Homepage Route
+Route::get('/', ['as' => 'home', 'uses' => 'UserController@index']);
+Route::get('/home', ['as' => 'home', 'uses' => 'UserController@index']);
 // Public Routes
 Route::group(['middleware' => 'web'], function () {
     // Activation Routes
@@ -41,15 +44,16 @@ Route::group(['middleware' => 'web'], function () {
 
 // Registered and Activated User Routes
 Route::group(['middleware' => ['auth', 'activated']], function () {
-    // Homepage Route
-    Route::get('/', ['as' => 'public.home', 'uses' => 'UserController@index']);
-
+    // Process Route
+    Route::get('/process/amounts', ['as' => 'process.amounts', 'uses' => 'ProcessController@amounts']);
+    Route::get('/process/sendto', ['as' => 'process.sendto', 'uses' => 'ProcessController@sendto']);
+    Route::get('/process/confirmation', ['as' => 'process.confirmation', 'uses' => 'ProcessController@confirmation']);
+    Route::get('/process/sending', ['as' => 'process.sending', 'uses' => 'ProcessController@sending']);
     // Activation Routes
     Route::get('/activation-required', ['uses' => 'Auth\ActivateController@activationRequired'])->name('activation-required');
     Route::get('/logout', ['uses'              => 'Auth\LoginController@logout'])->name('logout');
 
     //  Homepage Route - Redirect based on user role is in controller.
-    Route::get('/home', ['as' => 'public.home', 'uses' => 'UserController@index']);
 
     // Show users profile - viewable by other users.
     Route::get('profile/{username}', [
