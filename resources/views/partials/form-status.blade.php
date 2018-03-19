@@ -1,6 +1,6 @@
 @if (session('message'))
   <div class="message message dismissible">
-    <i class="material-icons status">&#xE876;</i>
+    <!-- <i class="material-icons status">&#xE876;</i> -->
     <h4>
         {{ trans('auth.message') }}
     </h4>
@@ -12,7 +12,7 @@
 
 @if (session('success'))
   <div class="success message dismissible">
-    <i class="material-icons status">&#xE876;</i>
+    <!-- <i class="material-icons status">&#xE876;</i> -->
     <h4>
         {{ trans('auth.success') }}
     </h4>
