@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-// use Auth;
+use Auth;
 
 class UserController extends Controller
 {
@@ -23,12 +23,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        // $user = Auth::user();
+        $user = Auth::user();
 
-        // if ($user->isAdmin()) {
-        //     return view('pages.admin.home');
-        // }
+        if ($user->isAdmin()) {
+            return view('pages.admin.home');
+        }
 
-        return view('pages.welcome');
+        return view('pages.user.home');
     }
 }
