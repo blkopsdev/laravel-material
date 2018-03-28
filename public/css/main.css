@@ -1,0 +1,552 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+@import url(https://fonts.googleapis.com/css?family=Raleway:800);
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+@import url(https://fonts.googleapis.com/css?family=Scope+One);
+@import url(https://fonts.googleapis.com/css?family=Anton);
+@import url(https://fonts.googleapis.com/css?family=Doppio+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,400,300,100);
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0; }
+
+li {
+  list-style: none;
+  text-decoration: none; }
+
+input, textarea {
+  outline: none; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  height: 60px;
+  box-shadow: 0px 1px 14px 2px #e7e7e7;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: white; }
+
+footer {
+  background-color: #efefef;
+  width: 100%;
+  padding: 10px; }
+  footer div {
+    background-color: #efefef;
+    margin-bottom: 0px; }
+
+#hamburgerToggle {
+  display: none; }
+  @media only screen and (max-width: 768px) {
+    #hamburgerToggle {
+      display: inline-block; } }
+
+.overlay {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: all 300ms ease; }
+
+.title {
+  font-family: 'Roboto';
+  font-weight: 100; }
+
+.title2 {
+  padding: 50px 0px 40px 0px;
+  font-family: 'Roboto';
+  font-weight: 100; }
+
+.showOverlay {
+  opacity: 0.7;
+  z-index: 900; }
+
+.overlaymenu {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  background: white;
+  padding: 40px;
+  transition: all 300ms ease; }
+
+.showOverlayMenu {
+  z-index: 902;
+  opacity: 1; }
+
+.ctr-btn {
+  display: block;
+  margin: 15px auto; }
+
+#exit1 {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+  padding: 6px 16px;
+  color: white;
+  background: black;
+  font-size: x-large;
+  font-weight: 700;
+  border: 2px solid #232323;
+  box-shadow: 0px 2px 7px 2px #d9d9d9; }
+
+.footertext {
+  color: #737373;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin: 0; }
+
+.selectCurrencyCtn {
+  position: absolute;
+  z-index: 2;
+  background: white;
+  top: 75px;
+  right: 0px;
+  box-shadow: 0px 0px 7px 3px #dedddd; }
+
+.wrap {
+  background-color: #f7f7f7;
+  height: 100vh; }
+
+.nav-header {
+  margin-left: 20px;
+  font-size: 22px;
+  font-family: 'Doppio One';
+  cursor: pointer;
+  color: #23b9a1; }
+
+.links {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0px; }
+  @media only screen and (max-width: 768px) {
+    .links {
+      display: none; } }
+
+.navlink {
+  margin: 0 15px;
+  font-size: 16px; }
+  .navlink a {
+    font-family: 'Roboto';
+    font-weight: 300;
+    text-decoration: none;
+    color: black;
+    transition: all 300ms ease; }
+  .navlink a:hover {
+    color: #32b9a1; }
+
+.hero-wrap {
+  margin-top: 95px; }
+
+.feature-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 15% 0px 15%;
+  padding: 50px 10px;
+  text-align: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 1px 14px -2px #d7d7d7;
+  min-height: 120px; }
+.feature-hero .row {
+  padding: 10px 0 20px;
+}
+.flt-left {
+  color: #969696;
+  font-weight: 400;
+  margin-bottom: 0px;
+  text-align: left;
+  display: block; }
+
+.txt-input {
+  display: inline-block;
+  border: none;
+  font-size: 22px;
+  outline: none;
+  outline-color: transparent;
+  outline-style: none;
+  width: 100%; }
+
+.txt-input:focus {
+  outline-color: transparent;
+  outline-style: none; }
+
+.section2 {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 100px; }
+
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Roboto';
+  font-weight: 700; }
+
+.textsection {
+  padding: 0px 150px 100px 150px; }
+  .textsection p {
+    font-size: 18px;
+    line-height: 1.75;
+    font-family: 'Open Sans'; }
+  @media only screen and (max-width: 768px) {
+    .textsection {
+      padding: 25px; } }
+
+.input-grp {
+  display: flex;
+  align-items: center;
+  width: 100%; }
+
+.grp-right {
+  width: 50%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+.currency {
+  border: none;
+  color: black;
+  font-size: 18px;
+  display: flex;
+  font-weight: 800; }
+  .currency i {
+    margin-left: 10px; }
+
+.hero-heading {
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 1; }
+
+.arrow {
+  align-items: center;
+  display: flex;
+  text-decoration: none; }
+
+.fa-arrow-right {
+  text-decoration: none; }
+
+.vert-cent {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  margin: 20px;
+  border-radius: 7px;
+  padding: 10px 16px;
+  width: 41%; }
+  @media only screen and (max-width: 768px) {
+    .vert-cent {
+      width: 80%; } }
+
+.btn-ctn {
+  text-align: center;
+  position: relative;
+  top: -25px; }
+
+.main-btn {
+  padding: 15px 20px;
+  width: 320px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  border-radius: 5px;
+  background-color: #32b9a1;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 2px 0px #f9f9f9;
+  transition: all 300ms ease; }
+
+.main-btn:hover {
+  box-shadow: 0px 2px 10px 2px #aaaaaa; }
+
+.row {
+  margin: 0; }
+
+.center-txt {
+  text-align: center; }
+
+.funnel {
+  display: block;
+  padding: 25px 20px 5px 20px;
+  border-bottom: 1px solid #e9e9e9; }
+  .funnel .stepsrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .funnel .stepsrow .step {
+      padding: 25px;
+      text-align: center; }
+
+.user-interface {
+  min-height: 500px;
+  background: #fff;
+  padding: 20px 5%; }
+  .user-interface .notice {
+    background: #ccc;
+    padding: 10px 20px;
+    border-radius: 5px; }
+    .user-interface .notice p {
+      margin: 0;
+      font-family: 'Roboto';
+      font-weight: 700; }
+
+.input-ctrl input {
+  margin: 0px 0px 30px 0px;
+  height: 50px;
+  font-size: 22px; }
+
+.input-prnt {
+  display: flex;
+  margin-bottom: 30px;
+  border: 1px solid #888; }
+  .input-prnt .namedLabel {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    flex-basis: 100px; }
+    .input-prnt .namedLabel div {
+      flex-basis: 80px; }
+  .input-prnt input {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    border: none;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 10px; }
+  .input-prnt .input-btn {
+    display: flex;
+    align-items: center;
+    flex-basis: 67px;
+    justify-content: center; }
+    .input-prnt .input-btn button {
+      height: 48px;
+      border: none;
+      border-left: 1px solid #aaa; }
+
+.btn-ctn-2 {
+  min-height: 140px; }
+  .btn-ctn-2 button {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 26px;
+    width: 100px; }
+    .btn-ctn-2 button::after {
+      border-left: 12px solid black;
+      border-top: 13px solid white;
+      border-bottom: 13px solid white;
+      content: '';
+      height: 26px;
+      width: 20px;
+      /* background: green; */
+      position: absolute;
+      right: -20px;
+      top: -1px; }
+
+.form-section {
+  display: flex;
+  justify-content: center; }
+  @media only screen and (max-width: 768px) {
+    .form-section {
+      display: block; } }
+  .form-section .bitcoinaddressForm {
+    max-width: 600px;
+    border: 2px solid #ccc;
+    padding: 25px 0px; }
+
+.sendtocontinue {
+  display: block;
+  margin: 20px auto 0px; }
+
+@media only screen and (max-width: 768px) {
+  .fix {
+    margin-top: 25px; } }
+
+.sendforminput {
+  margin-top: 25px; }
+
+.tr-title {
+  padding: 10px;
+  font-family: 'Roboto';
+  font-weight: 300; }
+
+.td-title {
+  padding: 10px;
+  font-family: 'Roboto';
+  font-weight: 300; }
+
+.notice-ctn {
+  padding: 0px 15px; }
+
+.title-ctn {
+  padding: 0px 15px;
+  margin: 25px 0px;
+  font-family: 'Roboto';
+  font-weight: 400; }
+
+.ctn-right {
+  border: 2px dashed #ccc;
+  padding: 5px; }
+
+.priceupdateheader {
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #32b9a1; }
+
+.getappnow {
+  font-family: 'Roboto';
+  font-weight: 300;
+  text-transform: uppercase; }
+
+#bitcoinPrice {
+  color: #32b9a1; }
+
+.moreinfo {
+  margin: 25px 0px 50px 0px; }
+
+.links-ctn {
+  min-height: 100px; }
+
+.box-card {
+  min-height: 400px;
+  margin: 0px 0px 40px 0px;
+  padding: 30px 57px 20px 57px;
+  text-align: center; }
+
+.social-links {
+  padding-bottom: 7px; }
+
+.card-img-parent {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px; }
+
+.card-img {
+  width: 100%; }
+
+.card-header {
+  letter-spacing: 1;
+  margin-bottom: 15px;
+  opacity: 0.75; }
+
+.card-desc {
+  font-family: 'Open Sans';
+  font-size: 15px;
+  color: #676767;
+  opacity: 0.85; }
+
+.txt-center {
+  text-align: center; }
+
+.currencydrp1 {
+  padding: 0;
+  width: 70%;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  max-height: 400px;
+  overflow: scroll;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 3px #e9e9e9;
+  opacity: 0;
+  transition: all 300ms ease; }
+
+.currencydrp2 {
+  padding: 0;
+  width: 70%;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  max-height: 400px;
+  overflow: scroll;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 3px #e9e9e9;
+  opacity: 0;
+  transition: all 300ms ease; }
+
+.currencyImg {
+  margin-left: 15px; }
+
+.currencyTxt {
+  display: inline-block;
+  font-family: 'Open Sans';
+  opacity: 0.8; }
+
+.iconName {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9; }
+  .iconName:hover {
+    background-color: #e0e0e0; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=main.css.map */
+.form-inline button:hover {
+  background-color: green;
+  color: white;
+}
+.feature-hero input[type=number] { text-align:right }
+.trading-section, .row.text-center{
+  padding-bottom: 50px;
+}
+.trading-section h2{
+  margin-bottom: 15px;
+}
+#quote-carousel {
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+  text-align:center;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+#quote-carousel .carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: -10px;
+  margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active {
+  background: #333333;
+  height:10px;
+  width:10px;
+  margin-bottom:1px;
+}
+#subscription_email{
+  padding: 5px 12px;
+}
+.section-content {
+  padding-top: 10px;
+}
+.footer-auth {
+  float: right;
+}
