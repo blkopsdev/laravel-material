@@ -211,8 +211,8 @@
     </div>
   </footer>
   <script src="https://s3-us-west-1.amazonaws.com/firstplace-4545/coinpaper/js/jquery.js"></script>
-  <!-- <script src="https://s3-us-west-1.amazonaws.com/firstplace-4545/coinpaper/js/jquery-ui.js"></script> -->
-  <!-- <script src="https://s3-us-west-1.amazonaws.com/firstplace-4545/coinpaper/js/bootstrap.min.js" type="text/javascript"></script> -->
+  <script src="https://s3-us-west-1.amazonaws.com/firstplace-4545/coinpaper/js/jquery-ui.js"></script>
+  <script src="https://s3-us-west-1.amazonaws.com/firstplace-4545/coinpaper/js/bootstrap.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
   
 

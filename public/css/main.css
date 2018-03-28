@@ -508,7 +508,8 @@ footer {
     opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
-.form-inline button:hover {
+.form-inline button:hover,
+.footer-auth button:hover {
   background-color: green;
   color: white;
 }
@@ -542,7 +543,9 @@ footer {
   margin-bottom:1px;
 }
 #subscription_email{
-  padding: 5px 12px;
+  padding: 6px 12px;
+  border: 1px solid #bdb8b8;
+  border-radius: 6px;
 }
 .section-content {
   padding-top: 10px;
